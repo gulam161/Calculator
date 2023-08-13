@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+}
+#calculator {
+  position: relative;
+  max-width: 382px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#display {
+  grid-column: span 4;
+  text-align: right;
+  height: 50px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+button {
+  position: relative;
+  height: 65px;
+  width: 80px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+#clear {
+  background: rgb(210, 65, 65);
+  color: white;
+}
+#clear:hover {
+  background: rgb(230, 53, 53);
+}
+.jumbo {
+  width: 164px;
+}
+.equals {
+  background: rgb(0, 68, 102);
+  color: aliceblue;
+  position: absolute;
+  height: 135px;
+  bottom: 20px;
+  right: 28px;
+}
+.equals:hover {
+  background: rgb(1, 55, 82);
+}
+
+.author {
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  word-spacing: 1.2px;
+  text-align: center;
+}
+.author a {
+  text-decoration: none;
+  color: #00264d;
+  line-height: 26px;
+}
+.author a:hover {
+  color: #d80a0a;
+}
+
+@media screen and (max-width: 385px) {
+  #calculator {
+    max-width: 326px;
+  }
+  #display {
+    width: 275px;
+  }
+  button {
+    height: 60px;
+    width: 65px;
+  }
+  .jumbo {
+    width: 134px;
+  }
+  .equals {
+    height: 124px;
+    right: 32px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .root {
+    row-gap: 20px;
+  }
+  #calculator {
+    max-width: 264px;
+  }
+  #display {
+    width: 222px;
+  }
+  button {
+    height: 55px;
+    width: 52px;
+  }
+  .jumbo {
+    width: 108px;
+  }
+  .equals {
+    height: 115px;
+    right: 23px;
+  }
+}
